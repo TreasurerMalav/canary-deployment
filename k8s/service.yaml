@@ -1,12 +1,11 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: python-app-service
-  namespace: blue-green
+  name: python-app-canary-service
+  namespace: canary
 spec:
   selector:
     app: python-app
-    color: blue
   ports:
     - protocol: TCP
       port: 80            # Expose the Service on port 80
